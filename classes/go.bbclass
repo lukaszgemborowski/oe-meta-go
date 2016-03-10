@@ -18,7 +18,8 @@ export GOSRC_FINAL = "${GOROOT_FINAL}/src"
 export GO_GCFLAGS = "${HOST_CFLAGS}"
 export GO_LDFLAGS = "${HOST_LDFLAGS}"
 
-DEPENDS += "go-cross"
+DEPENDS = "go-cross"
+BASEDEPENDS = ""
 
 INHIBIT_PACKAGE_STRIP = "1"
 

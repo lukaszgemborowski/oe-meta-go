@@ -2,8 +2,6 @@ DESCRIPTION = "This is a simple example recipe that cross-compiles a Go program.
 SECTION = "examples"
 HOMEPAGE = "https://golang.org/"
 
-DEPENDS = "go-cross"
-
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 LICENSE = "MIT"

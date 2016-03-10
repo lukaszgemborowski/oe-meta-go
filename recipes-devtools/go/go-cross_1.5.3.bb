@@ -2,8 +2,10 @@ inherit cross
 
 require go_${PV}.inc
 
+INHIBIT_SYSROOT_STRIP="1"
+
 do_compile() {
-  export GOROOT_BOOTSTRAP="${SYSROOT}${libdir}/go-bootstrap-${GO_BOOTSTRAP_VERSION}"
+  export GOROOT_BOOTSTRAP="${SYSROOT}$(dirname ${libdir})/go-bootstrap-${GO_BOOTSTRAP_VERSION}"
 
   ## Setting `$GOBIN` doesn't do any good, looks like it ends up copying binaries there.
   export GOROOT_FINAL="${SYSROOT}${libdir}/go"
